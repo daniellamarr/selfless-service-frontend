@@ -1,0 +1,59 @@
+// 
+    // Menu (Posts & Pages)
+
+    // @package ennis cuisine
+    // @author  Moyinoluwa
+.menu-grid
+    margin: 0 auto
+    display: grid
+    grid-gap: $space-sm
+    grid-template-columns:  repeat(auto-fit, minmax(252px, 1fr))
+    @media #{$mediumup}
+        grid-template-columns:  repeat(auto-fit, minmax(230px, 1fr))
+    @media #{$slargeup}
+        grid-template-columns:  repeat(auto-fit, minmax(230px, 1fr))
+
+.menu-grid-item
+    margin: 0 auto
+    // border: 1px solid black
+    width: 270px
+    @media #{$mediumup}
+        width: 100%
+.menu-image
+    border-radius: 4px
+
+.menu-button
+    padding: 0.5rem 1rem
+    color: $white
+    background-color: $primarycolor
+    border-radius: 4px
+
+.menu-container
+    margin: 0 auto
+    padding: 0.5rem
+    h2
+        text-align: center
+        
+.categories-container
+    // padding: 1rem    
+    border: 2px solid $altcolor
+    margin: 2rem 0.5rem 0 0.5rem
+    ul 
+        // padding-top: 1rem
+        li 
+            display:                inline-block
+            border-radius:          4px
+            padding:                0.7rem
+            margin-right:            0.5rem
+            margin-top:             1rem
+            background-color:       $altcolor
+            @media #{ $mediumup }
+                padding:            1rem
+            a
+                font-weight:        bold
+                // padding:            0.7rem
+                &:focus, &:hover, &.is-active
+                    color:          $white
+                    background-color: $primarycolor        
+                    border-radius:      4px
+                    

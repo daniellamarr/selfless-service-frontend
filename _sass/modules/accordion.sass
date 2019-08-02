@@ -1,0 +1,42 @@
+// 
+    // Accordion
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.accordion-wrapper
+    background-color:           #fff
+    box-shadow:                 $subtle-box-shadow
+    .accordion-item
+        .accordion-title
+            display:            flex
+            align-items:        center
+            justify-content:    space-between
+            padding:            $space $space-sm
+            font-weight:        $bold
+            color:              $black
+            border-top:         $borderline
+            text-decoration:    none!important
+            span
+                width:          80%
+            span, svg
+                pointer-events: none
+            .icon.icon-chevron-down
+                transition:     transform 320ms ease
+        &:first-child
+            .accordion-title
+                border-top:     0
+        .accordion-content
+            height:             0
+            overflow:           hidden
+            transition:         height 320ms ease
+            .accordion-inner
+                padding:        $space-sm
+                padding-top:    0
+                p:last-of-type
+                    margin-bottom:  0
+            &.is-expanded
+                height:         auto
+        &.is-active
+            .icon.icon-chevron-down
+                transform:      rotate(180deg)

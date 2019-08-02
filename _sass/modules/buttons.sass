@@ -1,0 +1,51 @@
+// 
+    // Buttons
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+button
+    background:             none
+    border:                 0
+    padding:                inherit
+    font:                   inherit
+    &.view-more
+        padding:            $space-xs
+    &:active, &:focus, &:hover
+        border:             0
+        outline:            transparent
+
+.btn
+    display:                inline-flex
+    align-items:            center
+    justify-content:        center
+    white-space:            nowrap
+    min-width:              96px
+    font-size:              $basefont
+    font-family:            $headingfont
+    font-weight:            $medium
+    line-height:            0
+    cursor:                 pointer
+    transition:             color 320ms ease-out, box-shadow 320ms ease-out, border 320ms ease-out
+    &.btn-md
+        height:             $space-md
+        padding:            $space-xs $space 0.72rem
+    &.btn-neutral
+        color:              $readablegray
+        box-shadow:         $subtle-box-shadow
+        background-color:   #fff
+        &:focus, &:hover
+            box-shadow:     0 0.5rem 1rem rgba(0,0,0,.1)
+            color:          $black
+            border-color:   transparent
+    &.btn-brand
+        color:              #fff
+        background-color:   $primarycolor
+        box-shadow:         $subtle-box-shadow
+        &:focus, &:hover
+            box-shadow:     0 0.5rem 1rem rgba(0,0,0,.1)
+            border-color:   transparent
+            color:          rgba(255,255,255,0.72)
+    svg
+        width:              20px
+        height:             20px

@@ -1,0 +1,40 @@
+// 
+    // Lists
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.tabular-list
+    display:                    grid
+    grid-template-columns:      repeat(auto-fill, minmax(296px, 1fr))
+    grid-gap:                   $space
+    @media #{$mediumup}
+        grid-gap:               $space-sm
+.tabular-list-block-item
+    display:                    flex
+    flex-direction:             column
+    justify-content:            center
+    min-height:                 160px
+    padding:                    $space
+    font-size:                  $mediumfont
+    line-height:                $headinglh
+    background-color:           #fff
+    box-shadow:                 $subtle-box-shadow
+    transition:                 color 320ms ease-out, box-shadow 320ms ease-out, border 320ms ease-out, background 320ms ease-out
+    &:focus, &:hover
+        box-shadow:             0 6px 16px rgba(0,0,0,.1)
+        background-color:       #fff
+    &.list-title-is-shorter
+        min-height:             64px
+    .post-content
+        font-size:              $smallfont
+
+
+.inline-list
+    display:                    flex
+    flex-wrap:                  wrap
+    li
+        margin-right:           $space-xs
+        margin-bottom:          $space-xs
+        &:last-child
+            margin-right:       0

@@ -1,0 +1,66 @@
+// 
+    // About Page
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+img[src*="kb"]
+    width:              168px
+    margin:             $space-sm
+    margin-left:        0
+    float:              left
+    border-radius:      50%
+    shape-outside:      circle()
+    @media #{ $smallup }
+        width:          192px
+    
+
+
+.about-image-title
+    height: 260px
+    background-color: #EBE9EA
+    @media #{ $smallup }
+        height: 400px
+    @media #{ $mediumup }
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        height: 420px
+   
+.about-image
+    @media #{ $smallup }
+        height: 320px
+    @media #{ $mediumup }
+        grid-column: 1 / 3
+        height: 420px
+        border-right: 1px solid white
+    img
+        height: 200px
+        width: 1167px
+        @media #{ $smallup }
+            height: 100%
+        @media #{ $mediumup }
+            height: 100%
+            width: 100%
+
+.about-title
+    padding-top: 0.5rem
+    @media #{ $mediumup }
+        padding-top: 23rem
+
+.about-article
+    text-align: center
+
+.about-content
+    text-align: center
+    display:    inline-block
+    h2 
+        margin-bottom: 0px
+        padding: 1.3rem 1.3rem 0 1.3rem
+
+.p  
+        line-height: 1.7
+        padding: 2rem 1.5rem .5rem 1.5rem
+        font-size: $nanofont    
+        @media #{ $mediumup }
+            padding: 2rem 0 0 0
+        

@@ -1,0 +1,107 @@
+// Header
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.site-header
+    .logo
+        svg
+            width:          45px
+            height:         45px
+
+.page-title
+    &::after
+        content:            ''
+        display:            block
+        height:             1px
+        margin-top:         1.5rem
+        background-color:   #ddd
+
+.affixed
+    position:               fixed
+    right:                  0
+    left:                   0
+    background-color:       #fff
+    transition:             transform 0.5s ease
+    z-index:                10
+    &.to-top
+        top:                0
+        transform:          translateY(-100%)
+        &.in-view
+            transform:      translateY(0)
+    &.to-bottom
+        bottom:             0
+        transform:          translateY(100%)
+        &.in-view
+            transform:      translateY(0)
+.mobile-header
+    padding:                 0 1rem
+    display:                flex
+    justify-content:        space-between
+    align-items:            center
+    width:                  100%
+    background-color:       $white
+    @media #{ $smallup }
+        display:            block
+    a
+        svg
+            width: 80px
+            height: 80px
+
+.d-ib
+    ul
+        width: 200px
+        margin: 0
+        li
+            display: inline
+.logo-holder
+    width: 140px
+    @media #{ $smallup }
+        margin: 0 auto
+
+.site-footer
+    p
+        line-height:            0.75
+
+    
+.header-image-container
+    position: relative
+    background-image:  linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://res.cloudinary.com/moyin/image/upload/v1561560631/jollof-1.jpg")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 200px
+    @media #{ $mediumup }
+        height: 500px
+        
+
+.header-text-button
+    text-align: center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 300px
+    @media #{ $mediumup }
+        width: 550px
+    h1
+        padding: 0 2rem
+        
+    button
+        width:                  100px
+        height:                 40px
+        color:                  $white
+        font-weight:            bold
+        font-size:              1rem
+        background:             $primarycolor
+        border-radius:          4px
+        margin-top:             1rem
+        padding:                0.5rem
+        @media #{ $smallup }
+            width:              120px
+            margin-left:        10px
+        @media #{ $mediumup }
+            width:              125px
+        @media #{ $slaptop }
+            width:              146px
+

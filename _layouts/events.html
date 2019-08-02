@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<section>
+    <div>
+        <h1>
+            Welcome to Selfless Service’s Events
+        </h1>
+        <p>
+            Our prime purpose in this life is to help others.
+        </p>
+        <p>
+            And if you can't help them, at least don't hurt them
+        </p>
+        <p>
+            - Dalai Lama
+        </p>
+    </div>
+    <div>
+        <input type="text" placeholder="search">
+        <button>
+            {%- include icons.html icon= 'search' -%}
+        </button>
+    </div>
+    {%- include layouts/events.html -%}
+    {%- include layouts/upcoming-events.html -%}
+
+    <div>
+        <p>
+            <a href="">View more events</a>
+            {%- include icons.html icon="calender" -%}
+        </p>
+    </div>
+</section>

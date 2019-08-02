@@ -1,0 +1,47 @@
+// 
+    // Contact section
+
+    // @package enniscuisine
+    // @author  Moyinoluwa <moyin.ariyo@gmail.com>
+
+       
+.contact-container
+    padding-top: 4rem
+    padding-left: 1rem
+    padding-right: 1rem
+    height: 422px
+    background-image: url('/uploads/contact.svg')
+    @media #{ $xsmallup }
+        padding-left: 4rem
+        padding-right: 4rem
+    @media #{ $mediumup }
+        padding-top: 6rem
+    @media #{ $slaptop }
+        padding-top: 8rem
+    @media #{ $sslaptop }
+        padding-left: 12rem
+        padding-right: 12rem
+.contact-info
+    margin: 0 auto
+    background-color: rgba(255, 255, 255, 0.7)
+    padding: 1rem 0
+    border-radius: 5px
+    @media #{ $slaptop }
+        padding: 2rem 0
+.contact-grid
+    margin: 0 auto
+    display: grid
+    grid-gap: $space-sm
+    grid-template-columns:  repeat(auto-fit, minmax(230px, 1fr))
+.first-li
+    @media #{ $slaptop }
+        padding-right: 1.5rem
+.second-li
+    @media #{ $slaptop }
+        border-left: 1px solid gray  
+        border-right: 1px solid gray
+        padding-left: 1.5rem
+        padding-right: 1.5rem  
+.third-li
+    @media #{ $slaptop }
+        padding-left: 1.5rem

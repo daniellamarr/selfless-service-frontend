@@ -1,0 +1,80 @@
+// 
+    // Navigations
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.nav
+    ul.is-horizontal
+        display:                    flex
+        li
+            a, button
+                display:            block
+                padding:            0.8rem
+                cursor:             pointer // because button
+                transition:         $linkColorTransition
+                @extend .alt-link
+                &.logo
+                    padding:        0
+                &.start
+                    padding:        0.72rem $space
+                &.is-active
+                    color:          $primarycolor
+            &:first-of-type a
+                padding-left:       0
+        &.is-toolsnav 
+            li
+                a, button
+                    padding:        0.72rem $space
+                &:last-of-type a, &:last-of-type button
+                    padding-right:  0
+
+.site-header, .site-footer
+    .nav
+        li
+            margin-bottom:          0
+            a
+                font-family:        $headingfont
+                font-weight:        $bold
+
+.fullscreen-toggler-li
+    display:                        none!important
+    @media #{'only screen and (min-width: 48em) and (any-pointer: fine)'}
+        display:                    inline-block!important
+    .fullscreen-toggler
+        position:                   relative
+        .icon.icon-maximize
+            transform:              scale(1)
+            opacity:                1
+            transition:             transform 320ms ease-in, opacity 320ms ease
+        .icon.icon-minimize
+            position:               absolute
+            top:                    50%
+            left:                   50%
+            transform:              translate(-50%,-62%) scale(0)
+            opacity:                0
+            transition:             transform 320ms ease-in, opacity 320ms ease
+        &.is-active
+            .icon.icon-maximize
+                transform:          scale(0)
+                opacity:            0
+            .icon.icon-minimize
+                transform:          translate(-50%,-62%) scale(1)
+                opacity:            1
+
+.nav-bar
+    height:                         100px
+    text-align:                     center
+    width:                          100%
+    background-color:               $white
+    ul li a
+        color:              $readablegray
+        &:focus, &:hover, &.is-active
+            color:          red 
+            font-weight:    bold
+            padding-bottom: 0.75rem
+            padding-left:   0.75rem
+            padding-right:  0.75rem
+            border-bottom:  3px solid red
+
+

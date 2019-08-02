@@ -1,0 +1,41 @@
+title: Selfless Service
+email: selfless@gmail.com 
+phoneno: 08120532752
+description: >- 
+ A servive to help the less privileged
+url: 'https://selfless' 
+twitter: 'https://twitter.com/selfless'
+
+
+# Build settings
+markdown: kramdown
+
+# Handling Reading
+charset: "utf-8"
+
+# Collections
+collections:
+  uploads:
+    title:  Uploads (Media & Files)
+    output: true
+
+      
+# Extraneous folders to include
+include: 
+  - _pages
+
+# Handling Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Files to exclude on build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - ".gitignore"
+

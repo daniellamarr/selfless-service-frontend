@@ -1,0 +1,34 @@
+// 
+    // Tables
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.table-responsive
+    overflow-x:                 auto
+    font-size:                  initial
+table
+    border-collapse:            collapse
+    margin:                     $space 0 $p-margin-bottom
+    background-color:           #fff
+    th, td
+        min-width:              296px
+        text-align:             left
+        padding:                $space-xs $space
+    thead
+        th
+            border:             $borderline
+            font-size:          $smallfont
+    tbody
+        border:                 $borderline
+        tr
+            border:             $borderline
+    &.alt-thead-bg
+        thead th:first-of-type
+            border-right:   0
+        thead th:last-of-type
+            background-color:   $primarycolor
+            border-color:       $primarycolor
+            color:              #fff
+    &.table-striped tbody tr:nth-of-type(odd)
+        background-color:       $platinum

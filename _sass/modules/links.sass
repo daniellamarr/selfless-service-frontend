@@ -1,0 +1,37 @@
+// 
+    // Links
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.link
+    font-family:        $headingfont
+    font-weight:        $medium
+
+.alt-link
+    color:              $sweetgray
+    &:focus, &:hover, &.is-active
+        color:          $primarycolor
+
+.noir-link
+    color:              $black
+    &:focus, &:hover, &.is-active
+        color:          $primarycolor
+
+.link-alt-colors
+    .icon, .h
+        transition:     color 320ms ease-out
+    .icon
+        color:          $sweetgray
+    .h
+        color:          $black
+    &:focus, &:hover, &.is-active
+        .icon, .h
+            color:      $primarycolor
+
+.card-link
+    &:hover, &:focus
+        h3 
+            color:  $black
+            text-decoration-line: underline
+            text-decoration-color: rgba(255, 0, 0, 0.5)

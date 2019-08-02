@@ -1,0 +1,44 @@
+// 
+    // Very Specific Section Decorations/Markers
+
+    // @package enniscuisine
+    // @author  Moyinoluwa Ariyo
+
+
+.menu-banner
+    background-color:               $primarycolor
+    padding:                        1rem 0.5rem
+    margin:                         2rem 0
+    text-align:                     center
+    @media #{ $smallup }
+        display:                    flex
+        justify-content:            space-between
+        align-items:                baseline
+        padding:                    2rem 1rem
+        margin:                     3rem 0
+    @media #{ $mediumup }
+        padding:                    2rem 8rem
+    @media #{ $largeup }
+        padding:                    3rem 13rem
+        margin:                     5rem 0
+        
+    button
+        background-color:           $white
+        padding:                    0.5rem
+        margin-top:                 0.5rem
+        border-radius:              4px
+        @media #{ $smallup }
+            margin-top:             0
+
+.gallery-grid
+    display:                        grid
+    grid-gap:                       25px
+    grid-template-columns:          repeat(auto-fit, minmax(200px, 1fr))
+    width:                          250px
+    margin:                         2rem auto
+    @media #{ $mediumup }
+        width:                      500px
+        margin:                     4rem auto
+    @media #{ $largeup }
+        width:                      900px
+        // margin:                     6rem auto

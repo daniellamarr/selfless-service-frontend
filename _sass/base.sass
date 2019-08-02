@@ -1,0 +1,76 @@
+// 
+    // Base
+
+    // @package 22
+    // @author  Kabolobari Benakole <kb@22.center>
+
+html
+    font-size:              $basefont
+    // background-color:       $primarycolor
+
+*, *::before, *::after
+    box-sizing:             border-box
+
+body
+    margin:                 0 
+    font-family:            $bodyfont
+    font-weight:            $normal
+    line-height:            $defaultlh
+    background-color:       $white
+    
+
+    // To enable sticky footer
+    display:                flex
+    flex-direction:         column
+    min-height:             100vh
+    main
+        flex:               1
+
+p
+    margin:                 0
+    margin-bottom:          $p-margin-bottom
+    color:                  $readablegray
+
+a, .as-link
+    text-decoration:        none
+    color:                  black
+    transition:             $linkColorTransition
+    &:focus, &:hover
+        text-decoration:    none
+        color:              $sweetgray
+
+audio, canvas, img, video
+    display:                block
+    vertical-align:         middle
+
+img
+    max-width:              100%
+    height:                 auto
+
+svg
+    vertical-align:         middle
+    pointer-events:         none
+
+ul
+    padding-left:           $space-md
+    &.none
+        padding-left:       0
+        list-style:         none
+ul, ol, ul ul, ol ul
+    margin:                 0 0 (1.25 * $p-margin-bottom)
+ul, ol
+    font-size:              90%
+
+textarea
+    background-color:       $platinum
+    border:                 $borderline
+    transition:             background-color 320ms ease-out
+    resize:                 vertical
+    width:                  100%
+    min-height:             8rem
+    max-height:             16rem
+    padding:                $space
+    font-size:              $microfont
+    &:focus
+        background-color:   #fff
+

@@ -1,0 +1,342 @@
+// 
+    // Trumps/Utilities
+
+    // @package devx
+    // @author  Kabolobari Benakole <i@kb.life>
+    // @version 1.0.0
+
+// Positioning
+.absolute-zero
+    position:           absolute
+    top:                0
+    right:              0
+    bottom:             0
+    left:               0
+.absolute-middle
+    position:           absolute
+    top:                50%
+    left:               50%
+    transform:          translate( -50%, -50% )
+
+.pos-rel
+    position:           relative
+.pos-stk
+    position:           sticky
+    position:           -webkit-sticky
+    &.t-0
+        top:            0
+// Border none
+.b-0
+    border: 0px
+// Display
+.d-blk
+    display:            block
+.d-ibl
+    display:            inline-block 
+.d-flx
+    display:            flex
+.flx-wrap
+    flex-wrap:          wrap
+.flx-dir-c
+    flex-direction:     column
+.al-i-fs
+    align-items:        flex-start
+.al-i-c
+    align-items:        center
+.al-i-b
+    align-items:        baseline
+    
+.j-c-sb
+    justify-content:    space-between
+.j-c-sa
+    justify-content:    space-around
+.j-c-fe
+    justify-content:    flex-end
+.j-c-c
+    justify-content:    center
+.j-i-c
+    justify-items:      center
+
+.flx-col-100
+    display:            flex
+    flex-direction:     column
+    height:             100%
+.flex-center-center
+    display:            flex
+    align-items:        center
+    justify-content:    center
+.grid-center-center
+    display:            grid
+    align-items:        center
+    justify-content:    center
+
+
+// Margins
+.m-0
+    margin:             0
+.m-1
+    margin:             1rem
+.m-2
+    margin:             2rem
+.m-3
+    margin:             3rem
+
+.my-0
+    margin-top:         0
+    margin-bottom:      0
+.my-1
+    margin-top:         1rem
+    margin-bottom:      1rem
+.my-3
+    margin-top:         3rem
+    margin-right:       3rem
+    @media #{ $mediumup }
+        margin-right:   7rem
+    @media #{ $largeup }
+        margin-right:   10rem
+.mx-1
+    margin-left:        5rem
+    margin-right:       5rem
+
+.mt-0
+    margin-top:         0
+.mt-h
+    margin-top:         0.5rem
+.mt-1
+    margin-top:         1rem
+.mt-1h
+    margin-top:         1.5rem
+.mt-2
+    margin-top:         2rem
+.mt-2h
+    margin-top:         2.5rem
+.mt-3
+    margin-top:         3rem
+
+.mx-auto
+    margin-right:       auto
+    margin-left:        auto
+.mr-h
+    margin-right:       0.5rem
+.mr-1
+    margin-right:       1rem
+.mr-1h
+    margin-right:       1.5rem
+
+.ml-h
+    margin-left:       0.5rem
+.ml-1
+    margin-left:       1rem
+
+.mb-0
+    margin-bottom:      0
+.mb-hh
+    margin-bottom:      0.25rem
+.mb-h
+    margin-bottom:      0.5rem
+.mb-1
+    margin-bottom:      1rem
+.mb-2
+    margin-bottom:      2rem
+.mb-3
+    margin-bottom:      3rem
+
+// Paddings
+.p-1
+    padding:            1rem
+.p-1h
+    padding:            1.5rem
+.p-2
+    padding:            2rem
+
+.py-0
+    padding-top:        0
+    padding-bottom:     0
+.py-h
+    padding-top:        0.5rem
+    padding-bottom:     0.5rem
+.py-1
+    padding-top:        1rem
+    padding-bottom:     1rem
+.py-2
+    padding-top:        2rem
+    padding-bottom:     2rem
+
+.px-0
+    padding-left:       0
+    padding-right:      0
+.px-h
+    padding-left:       .5rem
+    padding-right:      .5rem
+.px-1
+    padding-left:       1rem
+    padding-right:      1rem
+.px-2
+    padding-left:       2rem
+    padding-right:      2rem
+
+.pt-hh
+    padding-top:        0.25rem
+.pt-h
+    padding-top:        0.5rem
+.pt-1
+    padding-top:        1rem
+.pt-1h
+    padding-top:        1.5rem
+.pt-2
+    padding-top:        2rem 
+.pt-3
+    padding-top:        3rem
+.pt-3h
+    padding-top:        3.5rem
+.pt-4
+    padding-top:        4rem
+
+.pb-0
+    padding-bottom:     0
+.pb-h
+    padding-bottom:     0.5rem
+.pb-1
+    padding-bottom:     1rem
+.pb-1h
+    padding-bottom:     1.5rem
+.pb-2
+    padding-bottom:     2rem
+
+.p-1s
+    padding:            0 1rem
+.pl-h
+    padding-left:       0.5rem
+.pl-1
+    padding-left:       1rem
+.pl-2
+    padding-left:       2rem
+
+// nav bar paddings
+.pl-list-item
+    padding-left:       1rem
+    @media #{ $mediumup }
+        padding-left:      1.5rem
+    @media #{ $largeup }
+        padding-left:       2.5rem
+.pr-list-item
+    padding-right:      1rem
+    @media #{ $mediumup }
+        padding-right:      1.5rem
+    @media #{ $largeup }
+        padding-right:       2.5rem
+
+// menu grid paddings
+.p-menu
+    @media #{$smallup}
+        padding-left: 0.25rem
+        padding-right: 0.25rem
+
+.px-logo
+    padding-left:       3rem
+    padding-right:      3rem
+    @media #{ $mediumup }
+        padding-left:       10rem
+        padding-right:      10rem
+    @media #{ $largeup }
+        padding-left:       15rem
+        padding-right:      15rem 
+
+// Media Query Utilities
+.show-smallup
+    display:            none
+    @media #{ $smallup }
+        display:        block
+
+.show-mediumup
+    display:            none
+    @media #{ $mediumup }
+        display:        block
+
+.show-slargeup
+    display:            none
+    @media #{ $largeup }
+        display:        block
+.hide-slargeup
+    display:            block
+    @media #{ $largeup }
+        display:        none
+
+.hide-mediumup
+    display:            block
+    @media #{ $mediumup }
+        display:        none
+
+.hide-smallup
+    display:            block
+    @media #{ $smallup }
+        display:        none
+
+.hide-mediumup
+    display:            block
+    @media #{ $mediumup }
+        display:        none
+
+.mq-mt-1
+    margin-top:         1rem
+    @media #{ $mediumup }
+        margin-top:     0
+.mq-my
+    margin-top:         1rem
+    margin-bottom:      1rem
+    @media #{ $mediumup }
+        margin-bottom:  2rem
+        margin-top:     1rem
+.mq-mb-1
+    margin-bottom:      2rem
+    @media #{ $mediumup }
+        margin-bottom:  0
+.mq-pt-2
+    padding-top:        0
+    padding-bottom:     0
+    @media #{ $smallup }
+        padding-top:    4rem
+        padding-bottom: 3rem
+
+    
+// floats
+.flt-l
+    float: left
+.flt-r
+    float: right
+
+// Stacking
+.z-depth-1
+    z-index:            1
+
+
+// Opacity
+.opacity-7
+    opacity:            0.7
+
+// Screen Reader Text
+    // The .sr class ensure element is available in the DOM but only to screen readers. The whitespace: nowrap rule ensures accessible texts aren't smushed off screen.
+    // @link https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+.sr:not(:focus):not(:active)
+    position:            absolute
+    width:               1px
+    height:              1px
+    padding:             0
+    margin:              -1px
+    border:              0
+    clip-path:           inset(100%)
+    overflow:            hidden
+    white-space:         nowrap 
+
+.header-container
+    display:            flex
+    justify-content:    space-between
+    align-items:        center
+    margin:             0
+    padding:        32px 0
+    @media #{ $mediumup }
+        display:        block  
+        // padding:        32px 0
+
+        
+        

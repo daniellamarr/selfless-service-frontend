@@ -1,0 +1,49 @@
+// 
+    // Decorations on Elements
+
+    // @package 22
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.has-fullstop
+    position:               relative
+    display:                inline!important
+    &.d-blk
+        display:            block!important
+    &::after
+        position:           absolute
+        content:            ''
+        width:              7px
+        height:             7px
+        right:              -12px
+        bottom:             7px
+        background-color:   $primarycolor 
+    &.post-content
+        &::after
+            right:          unset
+            bottom:         0  
+
+.border-top
+    border-top:             $borderline
+.border-right
+    border-right:           $borderline
+.border-bottom
+    border-bottom:          $borderline
+
+.separator
+    margin:                 0 $space-xxs
+    &::after
+        content:            '\00B7'
+        color:              inherit
+
+.box-attention-grabber
+    position:               relative
+    overflow:               hidden
+    &::before
+        content:            ''
+        position:           absolute
+        right:              -10px
+        bottom:             -10px
+        width:              25px
+        height:             25px
+        border-radius:      50%
+        background-color:   $primarycolor
