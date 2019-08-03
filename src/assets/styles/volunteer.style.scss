@@ -1,0 +1,33 @@
+main .volunteer {
+  position: absolute;
+  height: 500px;
+  width: 450px;
+  background-color: rgba(255, 255, 255, 0.3);
+  right: 80px;
+  padding: 20px;
+}
+
+.volunteer form {
+  margin-top: 30px;
+}
+
+.volunteer input {
+  width: 100%;
+  background-color: transparent;
+  color: $white;
+  padding: 10px;
+  padding-left: 0;
+  border: none;
+  border-bottom: 1px solid $white;
+  font-family: $primary-font;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.volunteer form button {
+  margin-top: 30px;
+}
+
+.volunteer input::placeholder {
+  color: $white;
+}
