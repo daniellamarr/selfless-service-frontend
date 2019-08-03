@@ -1,3 +1,91 @@
-p {
-  font-family: $primary-font;
+main {
+  padding: 80px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.mainTitle {
+  width: 450px;
+  margin-top: 50px;
+}
+
+.mainTitle > p {
+  text-shadow: $shadow;
+  line-height: 60px;
+  margin-bottom: 25px;
+}
+
+.mainSubtitle p {
+  line-height: 25px;
+}
+
+.mainImage {
+  position: absolute;
+  background-image: url(../images/homebg.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  height: 350px;
+  border-radius: 3px;
+  box-shadow: $shadow;
+  right: 80px;
+}
+
+#about {
+  height: 400px;
+  margin-top: 80px;
+}
+
+.aboutDetails {
+  background-color: rgba(255, 215, 0, 1);
+  position: absolute;
+  width: 350px;
+  margin-top: -350px;
+  padding: 50px;
+}
+
+.aboutDetails p {
+  margin-bottom: 30px;
+}
+
+#events {
+  padding: 80px;
+}
+
+// Events
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
