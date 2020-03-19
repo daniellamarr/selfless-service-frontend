@@ -6,7 +6,20 @@ import { colors } from '../utils/theme';
 
 export default class Header extends Component {
   render() {
-    const links = ['About Us', 'Blog', 'Events'];
+    const links = [
+      {
+        title: 'About Us',
+        url: 'about'
+      },
+      {
+        title: 'Blog',
+        url: 'blog'
+      },
+      {
+        title: 'Events',
+        url: 'events'
+      }
+    ];
     const linkStyle = {
       color: this.props.linkColor || colors.black
     };
@@ -18,7 +31,7 @@ export default class Header extends Component {
             {links.map(link => {
               return (
                 <li>
-                  <a style={linkStyle}>{link}</a>
+                  <Link to={link.url} style={linkStyle}>{link.title}</Link>
                 </li>
               )
             })}
