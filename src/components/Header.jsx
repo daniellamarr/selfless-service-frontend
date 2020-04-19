@@ -1,29 +1,46 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import Button from './Button';
+import { colors } from '../utils/theme';
 
 export default class Header extends Component {
   render() {
+    const links = [
+      {
+        title: 'About Us',
+        url: 'about'
+      },
+      {
+        title: 'Blog',
+        url: 'blog'
+      },
+      {
+        title: 'Events',
+        url: 'events'
+      }
+    ];
+    const linkStyle = {
+      color: this.props.linkColor || colors.black
+    };
     return (
       <header>
-        <Logo type="text" />
+        <Logo logoColor={this.props.linkColor} type="text" />
         <nav>
           <ul>
+            {links.map(link => {
+              return (
+                <li>
+                  <Link to={link.url} style={linkStyle}>{link.title}</Link>
+                </li>
+              )
+            })}
             <li>
-              <a>About Us</a>
-            </li>
-            <li>
-              <a>Blog</a>
-            </li>
-            <li>
-              <a>Events</a>
-            </li>
-            <li>
-              <a>
+              <Link to="volunteer">
                 <Button size="small" rounded>
                   Volunteer
                 </Button>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
