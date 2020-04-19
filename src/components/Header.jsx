@@ -25,7 +25,7 @@ export default class Header extends Component {
     };
     return (
       <header>
-        <Logo logoColor={this.props.linkColor} type="text" />
+        <Logo logoColor={this.props.linkColor} type="image" />
         <nav>
           <ul>
             {links.map(link => {

@@ -7,7 +7,7 @@ export default class Button extends Component {
     let style;
     if (rounded) {
       style = {
-        borderRadius: '3px'
+        borderRadius: '30px'
       }
     } else {
       style = {

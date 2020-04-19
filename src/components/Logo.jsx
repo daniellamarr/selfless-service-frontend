@@ -10,7 +10,7 @@ export default class Logo extends Component {
           ? <Text color={this.props.logoColor || colors.black} size="25px">
             Selfless Service
           </Text>
-          : <img />
+          : <img src={require('../assets/images/logo/logo-ld.png')} width="120px" />
         }
       </div>
     )

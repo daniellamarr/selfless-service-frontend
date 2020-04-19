@@ -1,7 +1,7 @@
 const truncate = (str = '') => {
   const len = str.length;
-  if (len > 100) {
-    return str.substr(0, 101) + '. . .';
+  if (len > 200) {
+    return str.substr(0, 201) + '. . .';
   }
   return str;
 }
