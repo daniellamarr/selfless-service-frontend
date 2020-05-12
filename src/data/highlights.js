@@ -1,51 +1,55 @@
+import { fullStoragePath } from './gcloudStorage';
+
+const highlightsPath = 'highlights%2F';
+
 const highlights = [
   {
-    image: '1.jpg'
+    image: fullStoragePath(`${highlightsPath}1.jpg`),
   },
   {
-    image: '2.jpg'
+    image: fullStoragePath(`${highlightsPath}2.jpg`),
   },
   {
-    image: '3.jpg'
+    image: fullStoragePath(`${highlightsPath}3.jpg`),
   },
   {
-    image: '4.jpg'
+    image: fullStoragePath(`${highlightsPath}4.jpg`),
   },
   {
-    image: '5.jpg'
+    image: fullStoragePath(`${highlightsPath}5.jpg`),
   },
   {
-    image: '6.jpg'
+    image: fullStoragePath(`${highlightsPath}6.jpg`),
   },
   {
-    image: '7.jpg'
+    image: fullStoragePath(`${highlightsPath}7.jpg`),
   },
   {
-    image: '8.jpg'
+    image: fullStoragePath(`${highlightsPath}8.jpg`),
   },
   {
-    image: '9.jpg'
+    image: fullStoragePath(`${highlightsPath}9.jpg`),
   },
   {
-    image: '10.jpg'
+    image: fullStoragePath(`${highlightsPath}10.jpg`),
   },
   {
-    image: '11.jpg'
+    image: fullStoragePath(`${highlightsPath}11.jpg`),
   },
   {
-    image: '12.jpg'
+    image: fullStoragePath(`${highlightsPath}12.jpg`),
   },
   {
-    image: '13.jpg'
+    image: fullStoragePath(`${highlightsPath}13.jpg`),
   },
   {
-    image: '14.jpg'
+    image: fullStoragePath(`${highlightsPath}14.jpg`),
   },
   {
-    image: '15.jpg'
+    image: fullStoragePath(`${highlightsPath}15.jpg`),
   },
   {
-    image: '16.jpg'
+    image: fullStoragePath(`${highlightsPath}16.jpg`),
   },
 ];
 

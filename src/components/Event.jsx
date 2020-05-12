@@ -8,7 +8,7 @@ export default class Event extends Component {
   render() {
     const {event} = this.props;
     return (
-      <div className="column" style={{backgroundImage: `url(${require(`../assets/images/events/${event.image}`)})`}}>
+      <div className="column" style={{backgroundImage: `url(${event.image})`}}>
         <div className="column-details">
           <div className="column-details-inner">
             <Text color={colors.primary} fontFamily="secondary2" size="18px">{event.title}</Text>

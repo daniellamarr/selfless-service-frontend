@@ -8,8 +8,23 @@ import Footer from '../components/Footer';
 import events from '../data/events';
 import highlights from '../data/highlights';
 import team from '../data/team';
+import Modal from '../components/Modal';
 
 export default class Home extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      openHighlight: false,
+      highlight: {}
+    }
+
+    this.openHighlightPreview = (highlight, index) => {
+      highlight.id = index;
+      this.setState({highlight, openHighlight: true});
+    }
+  }
+
   render() {
     return (
       <section id="container">
@@ -63,7 +78,11 @@ export default class Home extends Component {
           </div>
           <div className="all-highlights">
             {highlights.map((highlight, index) => (
-              <div key={index} className="highlights" style={{backgroundImage: `url(${require(`../assets/images/highlights/${highlight.image}`)})`}} />
+              <div
+                key={index}
+                className="highlights"
+                style={{backgroundImage: `url(${highlight.image})`}}
+                onClick={() => this.openHighlightPreview(highlight, index)} />
             ))}
           </div>
         </section>
@@ -85,7 +104,7 @@ export default class Home extends Component {
           <div className="team">
             {team.map((person, index) => (
               <div className="team-details" key={index}>
-                <div className="image" style={{backgroundImage: person.image ? `url(${require(`../assets/images/members/${person.image}`)})` : `url(${require(`../assets/images/logo/logo-dark.png`)})`}}></div>
+                <div className="image" style={{backgroundImage: person.image ? `url(${person.image})` : `url(${require(`../assets/images/logo/logo-dark.png`)})`}}></div>
                 <div className="details">
                   <Text color={colors.white}>{person.name}</Text>
                   <Text size="12px">{person.role}</Text>
@@ -96,6 +115,26 @@ export default class Home extends Component {
         </section>
         <section id="blog"></section>
         <Footer />
+        {this.state.openHighlight && (
+          <Modal id="highlights-modal" closemodal={() => this.setState({openHighlight: false})}>
+            <div className="highlights-preview" style={{backgroundImage: `url(${this.state.highlight.image})`}}>
+              {highlights[0].image !== this.state.highlight.image && (
+                <div
+                  className="prev"
+                  onClick={() => this.openHighlightPreview(highlights[this.state.highlight.id - 1], this.state.highlight.id - 1)}>
+                  <span className="fa fa-chevron-left" />
+                </div>
+              )}
+              {highlights[highlights.length - 1].image !== this.state.highlight.image && (
+                <div
+                  className="next"
+                  onClick={() => this.openHighlightPreview(highlights[this.state.highlight.id + 1], this.state.highlight.id + 1)}>
+                  <span className="fa fa-chevron-right" />
+                </div>
+              )}
+            </div>
+          </Modal>
+        )}
       </section>
     )
   }

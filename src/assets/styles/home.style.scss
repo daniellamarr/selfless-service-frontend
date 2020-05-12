@@ -185,6 +185,38 @@ main {
     background-size: cover;
     height: 500px;
     width: 300px;
+    cursor: pointer;
+  }
+}
+
+#highlights-modal {
+  .highlights-preview {
+    background-image: url(../images/donate.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    margin-top: 7%;
+    height: 60%;
+    width: 60%;
+      
+    .fa {
+      color: $white;
+      font-size: 30px;
+    }
+
+    .prev {
+      position: absolute;
+      margin-top: 15%;
+      left: 80px;
+      cursor: pointer;
+    }
+
+    .next {
+      position: absolute;
+      margin-top: 15%;
+      right: 80px;
+      cursor: pointer;
+    }
   }
 }
 
