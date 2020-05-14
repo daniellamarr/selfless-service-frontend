@@ -25,12 +25,12 @@ export default class Header extends Component {
     };
     return (
       <header>
-        <Logo logoColor={this.props.linkColor} type="text" />
+        <Logo logoColor={this.props.linkColor} type="image" />
         <nav>
           <ul>
-            {links.map(link => {
+            {links.map((link, index) => {
               return (
-                <li>
+                <li key={index}>
                   <Link to={link.url} style={linkStyle}>{link.title}</Link>
                 </li>
               )
