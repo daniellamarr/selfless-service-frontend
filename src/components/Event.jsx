@@ -3,6 +3,7 @@ import Text from './Text';
 import { colors } from '../utils/theme';
 import truncate from '../utils/truncate';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 export default class Event extends Component {
   render() {
@@ -16,9 +17,11 @@ export default class Event extends Component {
               {truncate('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.')}
             </Text>
             <Text color={colors.white} fontFamily="secondary" size="8px">{event.date}</Text>
-            <Button rounded size="small">
-              Learn More
-            </Button>
+            <Link to={`/events/${event.id}`}>
+              <Button rounded size="small">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
